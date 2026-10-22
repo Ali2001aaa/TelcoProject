@@ -1,0 +1,164 @@
+{
+  "dataset_shape": [
+    7043,
+    21
+  ],
+  "train_churn_rate": 0.2653532126375577,
+  "feature_set": "original",
+  "final_model": "HistGradientBoosting",
+  "best_params": {
+    "model__min_samples_leaf": 40,
+    "model__max_leaf_nodes": 31,
+    "model__max_iter": 200,
+    "model__max_depth": 4,
+    "model__learning_rate": 0.02,
+    "model__l2_regularization": 0
+  },
+  "reduced_features_used": true,
+  "calibration": "isotonic",
+  "threshold": 0.34,
+  "cv_comparison_default": [
+    {
+      "model": "Random baseline",
+      "train_f1": 0.2544,
+      "val_f1": 0.2762,
+      "val_f1_std": 0.0249,
+      "f1_gap": -0.0218,
+      "val_precision": 0.2748,
+      "val_recall": 0.2776,
+      "val_roc_auc": 0.5065,
+      "val_avg_precision": 0.2686,
+      "train_avg_precision": 0.2636,
+      "ap_gap": -0.005
+    },
+    {
+      "model": "Logistic Regression",
+      "train_f1": 0.6336,
+      "val_f1": 0.6283,
+      "val_f1_std": 0.0232,
+      "f1_gap": 0.0053,
+      "val_precision": 0.5169,
+      "val_recall": 0.8013,
+      "val_roc_auc": 0.846,
+      "val_avg_precision": 0.66,
+      "train_avg_precision": 0.6649,
+      "ap_gap": 0.0049
+    },
+    {
+      "model": "Random Forest",
+      "train_f1": 0.752,
+      "val_f1": 0.6314,
+      "val_f1_std": 0.0202,
+      "f1_gap": 0.1206,
+      "val_precision": 0.5582,
+      "val_recall": 0.7278,
+      "val_roc_auc": 0.8447,
+      "val_avg_precision": 0.6538,
+      "train_avg_precision": 0.8353,
+      "ap_gap": 0.1815
+    },
+    {
+      "model": "HistGradientBoosting",
+      "train_f1": 0.8023,
+      "val_f1": 0.6253,
+      "val_f1_std": 0.0195,
+      "f1_gap": 0.1769,
+      "val_precision": 0.5466,
+      "val_recall": 0.7311,
+      "val_roc_auc": 0.8368,
+      "val_avg_precision": 0.6456,
+      "train_avg_precision": 0.8736,
+      "ap_gap": 0.2279
+    }
+  ],
+  "cv_comparison_tuned": [
+    {
+      "model": "Logistic Regression (tuned)",
+      "train_f1": 0.6334,
+      "val_f1": 0.6299,
+      "val_f1_std": 0.0193,
+      "f1_gap": 0.0035,
+      "val_precision": 0.5219,
+      "val_recall": 0.7946,
+      "val_roc_auc": 0.8449,
+      "val_avg_precision": 0.6589,
+      "train_avg_precision": 0.6622,
+      "ap_gap": 0.0033,
+      "f1_before_tuning": 0.6283,
+      "f1_change": 0.0017
+    },
+    {
+      "model": "Random Forest (tuned)",
+      "train_f1": 0.7272,
+      "val_f1": 0.6322,
+      "val_f1_std": 0.0216,
+      "f1_gap": 0.0949,
+      "val_precision": 0.5474,
+      "val_recall": 0.7485,
+      "val_roc_auc": 0.8459,
+      "val_avg_precision": 0.664,
+      "train_avg_precision": 0.7938,
+      "ap_gap": 0.1299,
+      "f1_before_tuning": 0.6314,
+      "f1_change": 0.0008
+    },
+    {
+      "model": "HistGradientBoosting (tuned)",
+      "train_f1": 0.6641,
+      "val_f1": 0.6381,
+      "val_f1_std": 0.0132,
+      "f1_gap": 0.026,
+      "val_precision": 0.5288,
+      "val_recall": 0.8047,
+      "val_roc_auc": 0.8492,
+      "val_avg_precision": 0.6675,
+      "train_avg_precision": 0.7185,
+      "ap_gap": 0.051,
+      "f1_before_tuning": 0.6253,
+      "f1_change": 0.0128
+    }
+  ],
+  "full_vs_reduced": [
+    {
+      "model": "Full features",
+      "train_f1": 0.6640994528795943,
+      "val_f1": 0.6381008601463283,
+      "val_f1_std": 0.013187574045485422,
+      "f1_gap": 0.02599859273326599,
+      "val_precision": 0.5288217245272597,
+      "val_recall": 0.8046822742474916,
+      "val_roc_auc": 0.8492209699733191,
+      "val_avg_precision": 0.6674750480471452,
+      "train_avg_precision": 0.7184938207416212,
+      "ap_gap": 0.05101877269447597,
+      "n_features": 45
+    },
+    {
+      "model": "Reduced (L1 selection)",
+      "train_f1": 0.6637676160487286,
+      "val_f1": 0.6349091903538546,
+      "val_f1_std": 0.011731636121572605,
+      "f1_gap": 0.028858425694873957,
+      "val_precision": 0.5262082119944635,
+      "val_recall": 0.8006688963210703,
+      "val_roc_auc": 0.8496744576800259,
+      "val_avg_precision": 0.6681621582036523,
+      "train_avg_precision": 0.7182141896326468,
+      "ap_gap": 0.0500520314289945,
+      "n_features": 24
+    }
+  ],
+  "test_metrics": {
+    "f1": 0.6310904872389791,
+    "precision": 0.5573770491803278,
+    "recall": 0.7272727272727273,
+    "avg_precision": 0.6592387342680852,
+    "roc_auc": 0.8470110310263763,
+    "brier": 0.13518396590562706
+  },
+  "test_f1_bootstrap_95": [
+    0.5885345747112425,
+    0.6659500183755972
+  ],
+  "sklearn_version": "1.7.2"
+}
